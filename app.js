@@ -28,3 +28,14 @@ function updateFriendsList() {
 
   friendsList.innerHTML = items;
 }
+
+function raffleSecretFriend() {
+  console.log(friends.length, typeof friends.length);
+  if (friends.length !== 0) {
+    let randomIndex = Math.floor(Math.random() * friends.length);
+
+    document.getElementById(
+      'resultado'
+    ).innerHTML = `<li>${friends[randomIndex]}</li>`;
+  }
+}
